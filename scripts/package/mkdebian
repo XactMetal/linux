@@ -170,7 +170,6 @@ Source: $sourcename
 Section: kernel
 Priority: optional
 Maintainer: $maintainer
-Build-Depends: bc, kmod, cpio
 Homepage: http://www.kernel.org/
 
 Package: $packagename
