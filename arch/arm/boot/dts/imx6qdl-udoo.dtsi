@@ -340,3 +340,22 @@
 	ac97-gpios = <&gpio4 19 0 &gpio4 18 0 &gpio2 30 0>;
 	status = "okay";
 };
+
+/* Float pins */
+&iomuxc {
+    pinctrl-names = "default";
+    pinctrl-0 = <
+        /* &pinctrl_hog_1 */
+        &xact_gpios
+    >;
+
+    imx6qdl-udoo {
+        xact_gpios: hoggrp-2 {
+            fsl,pins = <
+                MX6QDL_PAD_EIM_CS0__GPIO2_IO23     0x1b0b1 /* due 52 */
+		MX6QDL_PAD_EIM_CS1__GPIO2_IO24     0x1b0b1 /* due 38 */
+            >;
+        };
+    };
+};
+
